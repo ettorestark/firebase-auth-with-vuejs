@@ -37,3 +37,6 @@ npm run test
 
 ### Dashboard
 ![Dashboard](https://github.com/ettorestark/firebase-auth-with-vuejs/blob/master/assets/Dashboard.jpg)
+
+---
+Con ❤️ por [Ettore Stark](https://github.com/ettorestark) 
