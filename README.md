@@ -27,13 +27,13 @@ npm run test
 ## Screenshots
 
 ### Sign Up
-![Sign Up]{https://github.com/ettorestark/firebase-auth-with-vuejs/blob/master/assets/SingUp.jpg}
+![Sign Up]{http://github.com/ettorestark/firebase-auth-with-vuejs/blob/master/assets/SingUp.jpg}
 
 ### Sign In
-![Sign In]{https://github.com/ettorestark/firebase-auth-with-vuejs/blob/master/assets/SignIn.jpg}
+![Sign In]{http://github.com/ettorestark/firebase-auth-with-vuejs/blob/master/assets/SignIn.jpg}
 
 ### Firebase Console
-![Firebase Console]{https://github.com/ettorestark/firebase-auth-with-vuejs/blob/master/assets/FirebaseConsole.jpg}
+![Firebase Console]{http://github.com/ettorestark/firebase-auth-with-vuejs/blob/master/assets/FirebaseConsole.jpg}
 
 ### Dashboard
-![Dashboard]{https://github.com/ettorestark/firebase-auth-with-vuejs/blob/master/assets/Dashboard.jpg}
+![Dashboard]{http://github.com/ettorestark/firebase-auth-with-vuejs/blob/master/assets/Dashboard.jpg}
