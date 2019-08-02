@@ -39,4 +39,4 @@ npm run test
 ![Dashboard](https://github.com/ettorestark/firebase-auth-with-vuejs/blob/master/assets/Dashboard.jpg)
 
 ---
-Con ❤️ por [Ettore Stark](https://github.com/ettorestark) 
+With ❤️ by [Ettore Stark](https://github.com/ettorestark) 
