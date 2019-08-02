@@ -1,6 +1,6 @@
-# firebase-auth
+# Firebase authentication using VueJS
 
-## Project setup
+## Project setup 🚀
 ```
 npm install
 ```
@@ -20,10 +20,6 @@ npm run build
 npm run test
 ```
 
-### Lints and fixes files
-```
-npm run lint
-```
+## Screenshots
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+
