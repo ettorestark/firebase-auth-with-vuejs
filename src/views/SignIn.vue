@@ -14,6 +14,9 @@
 					</div>
 					<div class="form-group">
 						<input type="password" placeholder="Password" class="form-control" :class="error.password.status" v-model="form.password">
+						<div class="invalid-feedback">
+							{{ error.password.message }}
+						</div>
 					</div>
 					<div class="form-group">
 						<router-link to="/sign_up">You dont' have an account?</router-link>

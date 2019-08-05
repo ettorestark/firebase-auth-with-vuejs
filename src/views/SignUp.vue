@@ -7,10 +7,16 @@
 						<b>Sign Up</b>
 					</div>
 					<div class="form-group">
-						<input type="text" placeholder="E-mail" class="form-control" v-model="form.email">
+						<input type="text" placeholder="E-mail" class="form-control" :class="error.email.status" v-model="form.email">
+						<div class="invalid-feedback">
+							{{ error.email.message }}
+						</div>
 					</div>
 					<div class="form-group">
-						<input type="password" placeholder="Password" class="form-control" v-model="form.password">
+						<input type="password" placeholder="Password" class="form-control" :class="error.password.status" v-model="form.password">
+						<div class="invalid-feedback">
+							{{ error.password.message }}
+						</div>
 					</div>
 					<div class="form-group">
 						<router-link to="/">Already have an account?</router-link>
@@ -31,9 +37,19 @@
 		data() {
 			return {
 				form: {
-					username: null,
-					email: null,
-					password: null
+					username: '',
+					email: '',
+					password: ''
+				},
+				error: {
+					email: {
+						status: '',
+						message: ''
+					},
+					password: {
+						status: '',
+						message: ''
+					}
 				}
 			}
 		},
@@ -46,7 +62,24 @@
 				).then(response => {
 					this.$router.replace('/');
 				}).catch(err => {
-					console.log(err);
+					this.error.email.status = '';
+					this.error.email.message = '';
+
+					this.error.password.status = '';
+					this.error.password.message = '';
+
+					console.log(err.code);
+
+					switch(err.code) {
+						case "auth/invalid-email": 
+							this.error.email.status = 'is-invalid';
+							this.error.email.message = err.message;
+						break; 
+						case "auth/weak-password": 
+							this.error.password.status = 'is-invalid';
+							this.error.password.message = err.message;
+						break; 
+					}
 				})
 			}
 		}
