@@ -17,6 +17,10 @@ const router = new Router({
 			component: () => import('./views/SignUp.vue')
 		},
 		{
+			path: '/forgot',
+			component: () => import('./views/Forgot.vue')
+		},
+		{
 			path: '/dashboard',
 			component: () => import('./views/Dashboard.vue'),
 			meta: { auth: true }

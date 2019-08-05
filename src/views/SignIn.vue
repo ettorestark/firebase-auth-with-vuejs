@@ -19,13 +19,16 @@
 						</div>
 					</div>
 					<div class="form-group">
-						<router-link to="/sign_up">You dont' have an account?</router-link>
+						<router-link to="/forgot">Forgot your password?</router-link>
 					</div>
 					<div class="form-group">
 						<button class="btn btn-primary btn-block">Sign In</button>
 					</div>
 					<div class="form-group">
 						<button class="btn btn-secondary btn-block" @click.prevent="signInWithGoogle">Sign In with Google</button>
+					</div>
+					<div class="form-group text-center">
+						<router-link to="/sign_up">You dont' have an account?</router-link>
 					</div>
 				</form>
 			</div>
