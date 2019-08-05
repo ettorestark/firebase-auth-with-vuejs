@@ -22,7 +22,10 @@
 						<router-link to="/sign_up">You dont' have an account?</router-link>
 					</div>
 					<div class="form-group">
-						<button class="btn btn-primary">Sign In</button>
+						<button class="btn btn-primary btn-block">Sign In</button>
+					</div>
+					<div class="form-group">
+						<button class="btn btn-secondary btn-block" @click.prevent="signInWithGoogle">Sign In with Google</button>
 					</div>
 				</form>
 			</div>
@@ -83,6 +86,25 @@
 						break;
 					}
 				});
+			},
+
+
+			signInWithGoogle() {
+				var provider = new firebase.auth.GoogleAuthProvider();
+				provider.addScope('https://www.googleapis.com/auth/contacts.readonly');
+				firebase.auth().signInWithPopup(provider).then(function(result) {
+					var token = result.credential.accessToken;
+					var user = result.user;
+					console.log(token);
+				}).catch(function(error) {
+					var errorCode = error.code;
+					var errorMessage = error.message;
+					var email = error.email;
+					var credential = error.credential;
+					console.log(errorCode);
+					console.log(errorMessage);
+				});
+
 			}
 		}
 	}
